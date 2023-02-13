@@ -1,5 +1,4 @@
 import java.awt.Color;
-
 import se.lth.cs.pt.window.SimpleWindow;
 
 public class Graphics {

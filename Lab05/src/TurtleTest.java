@@ -60,13 +60,24 @@ public class TurtleTest {
 		w.writeText("Nedan ska vara tomt");
 
 		t1.left(-90);
+		System.out.println(t1.getX());
+		System.out.println(t1.getY());
+		System.out.println("        ");
+		System.out.println(t2.getX());
+		System.out.println(t2.getY());
 		t2.left(90);
 		t1.forward(50);
 		t2.forward(50);
+		System.out.println(t1.getX());
+		System.out.println(t1.getY());
+		System.out.println("        ");
+		System.out.println(t2.getX());
+		System.out.println(t2.getY());
 		t1.left(-90);
 		t2.left(-90);
 		t1.forward(50);
 		t2.forward(50);
+		
 	}
 
 	/** Testar att sköldpaddan inledningsvis är riktad rakt uppåt. */
@@ -101,6 +112,7 @@ public class TurtleTest {
 		int x = t.getX();
 		int y = t.getY();
 		reportResult("Har sköldpaddans koordinater god precision?", (x == 570 && y == 120));
+		
 	}
 
 	/** Testar att jumpTo faktiskt ändrar koordinaterna rätt */
@@ -123,7 +135,7 @@ public class TurtleTest {
 	public static void main(String[] args) {
 		SimpleWindow w = new SimpleWindow(650, 300, "TurtleTest");
 		TurtleTest tester = new TurtleTest(w);
-
+		
 		tester.testTwoTurtles();
 		tester.testDrawingWithPenUp();
 		tester.testInitialAngle();

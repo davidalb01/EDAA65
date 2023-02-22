@@ -14,9 +14,9 @@ public class Turtle {
         huvudet pekande rakt uppåt i fönstret (i negativ y-riktning). */
     public Turtle(SimpleWindow w, int x, int y) {
         this.w = w;
-        this.headDir = 90;
-        this.Xcord = x;
-        this.Ycord = y;
+        headDir = 90;
+        Xcord = x;
+        Ycord = y;
         
     }
 
@@ -48,7 +48,7 @@ public class Turtle {
 
     /** Vrider beta grader åt vänster runt pennan. */
     public void left(int beta) {
-        this.headDir += beta;
+        headDir += beta;
    
     }
 
@@ -77,6 +77,6 @@ public class Turtle {
 
     /** Tar reda på sköldpaddans riktning, i grader från den positiva X-axeln. */
     public int getDirection() {
-        return this.headDir;
+        return headDir;
     }
 }

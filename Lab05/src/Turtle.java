@@ -48,7 +48,7 @@ public class Turtle {
 
     /** Vrider beta grader åt vänster runt pennan. */
     public void left(int beta) {
-        headDir += beta;
+    	headDir = (headDir + beta) % 360;
    
     }
 
@@ -77,6 +77,6 @@ public class Turtle {
 
     /** Tar reda på sköldpaddans riktning, i grader från den positiva X-axeln. */
     public int getDirection() {
-        return headDir;
+        return (int) Math.round(headDir);
     }
 }

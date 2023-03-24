@@ -4,13 +4,28 @@ public class Calculator {
 	public static void main(String[] args) {
 	/*	System.out.println("Skriv två tal");
 		Scanner scan = new Scanner(System.in);
-		double nbr1 = scan.nextDouble();
-		double nbr2 = scan.nextDouble();
-		double sum = nbr1 + nbr2;
-		System.out.println("Summan av talen är " + sum);
+		int nbr1 = scan.nextInt();
+		int nbr2 = scan.nextInt();
+		System.out.println("nbr1 = " + nbr1);
+		System.out.println("nbr2 = " + nbr2);
+		System.out.println("---------------");
+		nbr1 = nbr1 ^ nbr2 ^ (nbr2 = nbr1);
+		System.out.println("nbr1 = " + nbr1);
+		System.out.println("nbr2 = " + nbr2);
 		scan.close(); */
-		int[] nbrs1 = {1, 2, 3, 4, 5}; 
-		System.out.println(nbrs1.length);
+		int a = 37;
+		int b = 5;
+		
+		if(a < b){
+            a = a ^ b ^(b = a);
+        }
+        while(b != 0){
+            int c =(a%b);
+            a = b;
+            b = c;
+        }
+        System.out.println("-- = "+ a );
+		
 		
 		
 	}

@@ -5,12 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FindBestCandidates {
-	private static final double MIN_AVG_GRADE = 4.0;
+	private static final double MIN_AVG_GRADE = 4.5;
 
 	public static void main(String[] args) {
+		
 		String fileName = "applications_all.txt";
 		int nbrOfRows = 435;
-		Applicant[] applicants = FileReader.readFromFile(fileName, nbrOfRows);
+		
+		Applicant[] applicants = FileReader.readFromFile(fileName, 500);
 		System.out.println("All Applicants");
 		System.out.println("-----------------------");
 		Arrays.sort(applicants);
@@ -21,16 +23,20 @@ public class FindBestCandidates {
 			
 			}
 			
+		
 		for(int i = 0; i < 5; i++) {
 			System.out.println("-----------------------");
 		}
+		
 		System.out.println("\033[32m"+ "Valid Applicants" + "\033[0m");
 		System.out.println("-----------------------");
+		
 		Applicant[] bestApplicants = FindBestCandidates.findBestCandidates(applicants);
 		Arrays.sort(bestApplicants);
-	    for (int i = 0; i < bestApplicants.length; i++) {
+	    
+		for (int i = 0; i < bestApplicants.length; i++) {
 	    	System.out.println("\033[32m" + bestApplicants[i].toString() + "\033[0m");
-
+	    	
 	    }
 	    System.out.println(bestApplicants.length);
 	    

@@ -23,7 +23,7 @@ public class MazeWalker {
         	 
         	if(maze.wallInFront(turtle.getDirection(), turtle.getX(), turtle.getY()) && maze.wallAtLeft(turtle.getDirection(), turtle.getX(), turtle.getY())) {
         	turtle.left((-90));
-        	turtle.forward(1);
+//        	turtle.forward(1);
         	}
         	else if(!maze.wallInFront(turtle.getDirection(), turtle.getX(), turtle.getY()) && maze.wallAtLeft(turtle.getDirection(), turtle.getX(), turtle.getY()) ) {
         		turtle.forward(1);
@@ -35,7 +35,7 @@ public class MazeWalker {
         		
         	}
         	
-        	SimpleWindow.delay(100);
+        	SimpleWindow.delay(10);
         	
         }
     }

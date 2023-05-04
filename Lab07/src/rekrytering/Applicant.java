@@ -13,9 +13,9 @@ import java.util.Arrays;
 */
 
 // Attributer:
-/* "name" som är en String.
-*  "grades" som är en Array av typen int.
-*/ 
+// "name" som är en String.
+//  "grades" som är en Array av typen int.
+ 
 
 public class Applicant implements Comparable<Applicant> {
 	//Varje sökande har ett namn och ett antal betyg
@@ -24,13 +24,13 @@ public class Applicant implements Comparable<Applicant> {
 
 //Konstruktorn heter Applicant 
 //har två parametarar:
-/* "name" som är en String. Namnet av sökanden 
-* "gradesAsString" som är en String. Betyget av sökanden. 
-*
-* Skickar vidare tolkningen av betygen till en privat hjälpmetod "parseGrades för att 
-* se till så att det sker korrekt och håller konstrukturn kortare. Hjälpmetoden tolkar
-* betygen från "gradesAsString" och lagrar dem i attributet "grades". 
-*/
+// "name" som är en String. Namnet av sökanden 
+// "gradesAsString" som är en String. Betyget av sökanden. 
+//
+// Skickar vidare tolkningen av betygen till en privat hjälpmetod "parseGrades för att 
+// se till så att det sker korrekt och håller konstrukturn kortare. Hjälpmetoden tolkar
+// betygen från "gradesAsString" och lagrar dem i attributet "grades". 
+
 	public Applicant(String name, String gradesAsString) {
 		this.name = name;
 		// Har flyttat tolkningen av betygen till en privat hjälpmetod för att hålla
@@ -44,26 +44,26 @@ public class Applicant implements Comparable<Applicant> {
 	    String[] g = gradesAsString.split(",");
 	    grades = new int[g.length];
 	    for (int i = 0; i < g.length; i++) {
-	     /*   switch (g[i].toUpperCase()) {
-	            case "A":
-	                grades[i] = 5;
-	                break;
-	            case "B":
-	                grades[i] = 4;
-	                break;
-	            case "C":
-	                grades[i] = 3;
-	                break;
-	            case "D":
-	                grades[i] = 3;
-	                break;
-	            case "E":
-	                grades[i] = 3;
-	                break;
-	            case "U":
-	                grades[i] = 0;
-	                break;
-	            default: */
+//	        switch (g[i].toUpperCase()) {
+//	            case "A":
+//	                grades[i] = 5;
+//	                break;
+//	            case "B":
+//	                grades[i] = 4;
+//	                break;
+//	            case "C":
+//	                grades[i] = 3;
+//	                break;
+//	            case "D":
+//	                grades[i] = 3;
+//	                break;
+//	            case "E":
+//	                grades[i] = 3;
+//	                break;
+//	            case "U":
+//	                grades[i] = 0;
+//	                break;
+//	            default: 
 	                try {
 	                    int grade = Integer.parseInt(g[i]);
 	                    if (grade >= 3 && grade <= 5) {
@@ -71,7 +71,9 @@ public class Applicant implements Comparable<Applicant> {
 	                    } else {
 	                        grades[i] = 0;
 	                    }
-	                } catch (NumberFormatException e) {
+	                } catch (NumberFormatException e) { 
+	                	//Om det inte är en nummer utan en bokstav eller tecken
+	                	//Sätts det till 0
 	                    grades[i] = 0;
 	                }
 	            //    break;
